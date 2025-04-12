@@ -1,0 +1,33 @@
+{
+  "name": "testSchoolTs",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "imports": {
+    "#models/*": "./dist/database/models/*.js",
+    "#types/*": "./dist/database/models/*.js"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc-watch --project . --outDir ./dist --onSuccess \"nodemon ./dist/bin/www.js\"",
+    "serve": "tsc && node ./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "tsc-watch": "^6.2.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.8.3"
+  },
+  "private": true,
+  "dependencies": {
+    "@sequelize/core": "^7.0.0-alpha.42",
+    "@sequelize/postgres": "^7.0.0-alpha.46",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "fast-glob": "^3.3.3",
+    "nodemon": "^3.1.9",
+    "sequelize": "^6.37.7",
+    "sequelize-typescript": "^2.1.6"
+  }
+}
